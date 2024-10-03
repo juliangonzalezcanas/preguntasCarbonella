@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario de Aptitudes</title>
+    <style>
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cuestionario de Aptitudes</h1>
+    <form #aptitudesForm="ngForm" (ngSubmit)="onSubmit()">
+
+        <label for="SS">1. ¿Qué tan apto te considerás para tratar y hablar con tacto a las personas?</label><br>
+<input type="radio" id="trato1" name="SS" value="0"><label class="radio-label" for="trato1"> Incompetente</label>
+<input type="radio" id="trato2" name="SS" value="1"><label class="radio-label" for="trato2"> Medianamente competente</label>
+<input type="radio" id="trato3" name="SS" value="2"><label class="radio-label" for="trato3"> Competente</label>
+<input type="radio" id="trato4" name="SS" value="3"><label class="radio-label" for="trato4"> Muy competente</label><br><br>
+
+<label for="EP">2. ¿Qué tan apto te considerás para ser jefe competente de un grupo o equipo?</label><br>
+<input type="radio" id="jefe1" name="EP" value="0"><label class="radio-label" for="jefe1"> Incompetente</label>
+<input type="radio" id="jefe2" name="EP" value="1"><label class="radio-label" for="jefe2"> Medianamente competente</label>
+<input type="radio" id="jefe3" name="EP" value="2"><label class="radio-label" for="jefe3"> Competente</label>
+<input type="radio" id="jefe4" name="EP" value="3"><label class="radio-label" for="jefe4"> Muy competente</label><br><br>
+
+<label for="V">3. ¿Qué tan apto te considerás para expresarte con facilidad en clase o con tu grupo de amigos?</label><br>
+<input type="radio" id="expresarte1" name="V" value="0"><label class="radio-label" for="expresarte1"> Incompetente</label>
+<input type="radio" id="expresarte2" name="V" value="1"><label class="radio-label" for="expresarte2"> Medianamente competente</label>
+<input type="radio" id="expresarte3" name="V" value="2"><label class="radio-label" for="expresarte3"> Competente</label>
+<input type="radio" id="expresarte4" name="V" value="3"><label class="radio-label" for="expresarte4"> Muy competente</label><br><br>
+
+<label for="AP">4. ¿Qué tan apto te considerás para dibujar casas, objetos, personas, etc.?</label><br>
+<input type="radio" id="dibujar1" name="AP" value="0"><label class="radio-label" for="dibujar1"> Incompetente</label>
+<input type="radio" id="dibujar2" name="AP" value="1"><label class="radio-label" for="dibujar2"> Medianamente competente</label>
+<input type="radio" id="dibujar3" name="AP" value="2"><label class="radio-label" for="dibujar3"> Competente</label>
+<input type="radio" id="dibujar4" name="AP" value="3"><label class="radio-label" for="dibujar4"> Muy competente</label><br><br>
+
+<label for="MS">5. ¿Qué tan apto te considerás para cantar en un grupo musical o coro?</label><br>
+<input type="radio" id="cantar1" name="MS" value="0"><label class="radio-label" for="cantar1"> Incompetente</label>
+<input type="radio" id="cantar2" name="MS" value="1"><label class="radio-label" for="cantar2"> Medianamente competente</label>
+<input type="radio" id="cantar3" name="MS" value="2"><label class="radio-label" for="cantar3"> Competente</label>
+<input type="radio" id="cantar4" name="MS" value="3"><label class="radio-label" for="cantar4"> Muy competente</label><br><br>
+
+<label for="OG">6. ¿Qué tan apto te considerás para llevar todas tus cosas en forma correcta y ordenada?</label><br>
+<input type="radio" id="ordenar1" name="OG" value="0"><label class="radio-label" for="ordenar1"> Incompetente</label>
+<input type="radio" id="ordenar2" name="OG" value="1"><label class="radio-label" for="ordenar2"> Medianamente competente</label>
+<input type="radio" id="ordenar3" name="OG" value="2"><label class="radio-label" for="ordenar3"> Competente</label>
+<input type="radio" id="ordenar4" name="OG" value="3"><label class="radio-label" for="ordenar4"> Muy competente</label><br><br>
+
+<label for="CT">7. ¿Qué tan apto te considerás para entender principios y experimentos de Biología?</label><br>
+<input type="radio" id="biologia1" name="CT" value="0"><label class="radio-label" for="biologia1"> Incompetente</label>
+<input type="radio" id="biologia2" name="CT" value="1"><label class="radio-label" for="biologia2"> Medianamente competente</label>
+<input type="radio" id="biologia3" name="CT" value="2"><label class="radio-label" for="biologia3"> Competente</label>
+<input type="radio" id="biologia4" name="CT" value="3"><label class="radio-label" for="biologia4"> Muy competente</label><br><br>
+
+<label for="CI">8. ¿Qué tan apto te considerás para ejecutar con rapidez y exactitud mecanizaciones aritméticas?</label><br>
+<input type="radio" id="mecanizaciones1" name="CI" value="0"><label class="radio-label" for="mecanizaciones1"> Incompetente</label>
+<input type="radio" id="mecanizaciones2" name="CI" value="1"><label class="radio-label" for="mecanizaciones2"> Medianamente competente</label>
+<input type="radio" id="mecanizaciones3" name="CI" value="2"><label class="radio-label" for="mecanizaciones3"> Competente</label>
+<input type="radio" id="mecanizaciones4" name="CI" value="3"><label class="radio-label" for="mecanizaciones4"> Muy competente</label><br><br>
+
+<label for="MC">9. ¿Qué tan apto te considerás para armar y componer objetos mecánicos como chapas, timbres, dispositivos electrónicos, etc.?</label><br>
+<input type="radio" id="objetos_mecanicos1" name="MC" value="0"><label class="radio-label" for="objetos_mecanicos1"> Incompetente</label>
+<input type="radio" id="objetos_mecanicos2" name="MC" value="1"><label class="radio-label" for="objetos_mecanicos2"> Medianamente competente</label>
+<input type="radio" id="objetos_mecanicos3" name="MC" value="2"><label class="radio-label" for="objetos_mecanicos3"> Competente</label>
+<input type="radio" id="objetos_mecanicos4" name="MC" value="3"><label class="radio-label" for="objetos_mecanicos4"> Muy competente</label><br><br>
+
+<label for="DT">10. ¿Qué tan apto te considerás para realizar actividades que requieren de destreza manual?</label><br>
+<input type="radio" id="destreza_manual1" name="DT" value="0"><label class="radio-label" for="destreza_manual1"> Incompetente</label>
+<input type="radio" id="destreza_manual2" name="DT" value="1"><label class="radio-label" for="destreza_manual2"> Medianamente competente</label>
+<input type="radio" id="destreza_manual3" name="DT" value="2"><label class="radio-label" for="destreza_manual3"> Competente</label>
+<input type="radio" id="destreza_manual4" name="DT" value="3"><label class="radio-label" for="destreza_manual4"> Muy competente</label><br><br>
+
+<label for="SS">11. ¿Qué tan apto te considerás para ser miembro activo y útil en un club o sociedad?</label><br>
+<input type="radio" id="club1" name="SS1" value="0"><label class="radio-label" for="club1"> Incompetente</label>
+<input type="radio" id="club2" name="SS1" value="1"><label class="radio-label" for="club2"> Medianamente competente</label>
+<input type="radio" id="club3" name="SS1" value="2"><label class="radio-label" for="club3"> Competente</label>
+<input type="radio" id="club4" name="SS1" value="3"><label class="radio-label" for="club4"> Muy competente</label><br><br>
+
+<label for="EP">12. ¿Qué tan apto te considerás para organizar y dirigir eventos grupales?</label><br>
+<input type="radio" id="organizar_eventos1" name="EP1" value="0"><label class="radio-label" for="organizar_eventos1"> Incompetente</label>
+<input type="radio" id="organizar_eventos2" name="EP1" value="1"><label class="radio-label" for="organizar_eventos2"> Medianamente competente</label>
+<input type="radio" id="organizar_eventos3" name="EP1" value="2"><label class="radio-label" for="organizar_eventos3"> Competente</label>
+<input type="radio" id="organizar_eventos4" name="EP1" value="3"><label class="radio-label" for="organizar_eventos4"> Muy competente</label><br><br>
+
+<label for="V">13. ¿Qué tan apto te considerás para redactar narraciones y/o artículos periodísticos?</label><br>
+<input type="radio" id="redactar1" name="V1" value="0"><label class="radio-label" for="redactar1"> Incompetente</label>
+<input type="radio" id="redactar2" name="V1" value="1"><label class="radio-label" for="redactar2"> Medianamente competente</label>
+<input type="radio" id="redactar3" name="V1" value="2"><label class="radio-label" for="redactar3"> Competente</label>
+<input type="radio" id="redactar4" name="V1" value="3"><label class="radio-label" for="redactar4"> Muy competente</label><br><br>
+
+<label for="AP">14. ¿Qué tan apto te considerás para pintar paisajes?</label><br>
+<input type="radio" id="pintar1" name="AP1" value="0"><label class="radio-label" for="pintar1"> Incompetente</label>
+<input type="radio" id="pintar2" name="AP1" value="1"><label class="radio-label" for="pintar2"> Medianamente competente</label>
+<input type="radio" id="pintar3" name="AP1" value="2"><label class="radio-label" for="pintar3"> Competente</label>
+<input type="radio" id="pintar4" name="AP1" value="3"><label class="radio-label" for="pintar4"> Muy competente</label><br><br>
+
+<label for="MS">15. ¿Qué tan apto te considerás para aprender a tocar un instrumento musical?</label><br>
+<input type="radio" id="instrumento1" name="MS1" value="0"><label class="radio-label" for="instrumento1"> Incompetente</label>
+<input type="radio" id="instrumento2" name="MS1" value="1"><label class="radio-label" for="instrumento2"> Medianamente competente</label>
+<input type="radio" id="instrumento3" name="MS1" value="2"><label class="radio-label" for="instrumento3"> Competente</label>
+<input type="radio" id="instrumento4" name="MS1" value="3"><label class="radio-label" for="instrumento4"> Muy competente</label><br><br>
+
+<label for="OG">16. ¿Qué tan apto te considerás para ordenar y clasificar debidamente papeles y documentos importantes?</label><br>
+<input type="radio" id="ordenar_papeles1" name="OG1" value="0"><label class="radio-label" for="ordenar_papeles1"> Incompetente</label>
+<input type="radio" id="ordenar_papeles2" name="OG1" value="1"><label class="radio-label" for="ordenar_papeles2"> Medianamente competente</label>
+<input type="radio" id="ordenar_papeles3" name="OG1" value="2"><label class="radio-label" for="ordenar_papeles3"> Competente</label>
+<input type="radio" id="ordenar_papeles4" name="OG1" value="3"><label class="radio-label" for="ordenar_papeles4"> Muy competente</label><br><br>
+
+<label for="CT">17. ¿Qué tan apto te considerás para entender principios y experimentos de Física?</label><br>
+<input type="radio" id="fisica1" name="CT1" value="0"><label class="radio-label" for="fisica1"> Incompetente</label>
+<input type="radio" id="fisica2" name="CT1" value="1"><label class="radio-label" for="fisica2"> Medianamente competente</label>
+<input type="radio" id="fisica3" name="CT1" value="2"><label class="radio-label" for="fisica3"> Competente</label>
+<input type="radio" id="fisica4" name="CT1" value="3"><label class="radio-label" for="fisica4"> Muy competente</label><br><br>
+
+<label for="CI">18. ¿Qué tan apto te considerás para resolver problemas de Aritmética?</label><br>
+<input type="radio" id="aritmetica1" name="CI1" value="0"><label class="radio-label" for="aritmetica1"> Incompetente</label>
+<input type="radio" id="aritmetica2" name="CI1" value="1"><label class="radio-label" for="aritmetica2"> Medianamente competente</label>
+<input type="radio" id="aritmetica3" name="CI1" value="2"><label class="radio-label" for="aritmetica3"> Competente</label>
+<input type="radio" id="aritmetica4" name="CI1" value="3"><label class="radio-label" for="aritmetica4"> Muy competente</label><br><br>
+
+<label for="MC">19. ¿Qué tan apto te considerás para desarmar, armar y reparar objetos?</label><br>
+<input type="radio" id="desarmar_objetos1" name="MC1" value="0"><label class="radio-label" for="desarmar_objetos1"> Incompetente</label>
+<input type="radio" id="desarmar_objetos2" name="MC1" value="1"><label class="radio-label" for="desarmar_objetos2"> Medianamente competente</label>
+<input type="radio" id="desarmar_objetos3" name="MC1" value="2"><label class="radio-label" for="desarmar_objetos3"> Competente</label>
+<input type="radio" id="desarmar_objetos4" name="MC1" value="3"><label class="radio-label" for="desarmar_objetos4"> Muy competente</label><br><br>
+
+<label for="DT">20. ¿Qué tan apto te considerás para manejar con habilidad herramientas de carpintería?</label><br>
+<input type="radio" id="carpinteria1" name="DT1" value="0"><label class="radio-label" for="carpinteria1"> Incompetente</label>
+<input type="radio" id="carpinteria2" name="DT1" value="1"><label class="radio-label" for="carpinteria2"> Medianamente competente</label>
+<input type="radio" id="carpinteria3" name="DT1" value="2"><label class="radio-label" for="carpinteria3"> Competente</label>
+<input type="radio" id="carpinteria4" name="DT1" value="3"><label class="radio-label" for="carpinteria4"> Muy competente</label><br><br>
+
+<label for="SS">21. ¿Qué tan apto te considerás para colaborar con otros para el bien de la comunidad?</label><br>
+<input type="radio" id="colaborar_comunidad1" name="SS2" value="0"><label class="radio-label" for="colaborar_comunidad1"> Incompetente</label>
+<input type="radio" id="colaborar_comunidad2" name="SS2" value="1"><label class="radio-label" for="colaborar_comunidad2"> Medianamente competente</label>
+<input type="radio" id="colaborar_comunidad3" name="SS2" value="2"><label class="radio-label" for="colaborar_comunidad3"> Competente</label>
+<input type="radio" id="colaborar_comunidad4" name="SS2" value="3"><label class="radio-label" for="colaborar_comunidad4"> Muy competente</label><br><br>
+
+<label for="EP">22. ¿Qué tan apto te considerás para convencer a otros para que hagan lo que vos crees que deben hacer?</label><br>
+<input type="radio" id="convencer1" name="EP2" value="0"><label class="radio-label" for="convencer1"> Incompetente</label>
+<input type="radio" id="convencer2" name="EP2" value="1"><label class="radio-label" for="convencer2"> Medianamente competente</label>
+<input type="radio" id="convencer3" name="EP2" value="2"><label class="radio-label" for="convencer3"> Competente</label>
+<input type="radio" id="convencer4" name="EP2" value="3"><label class="radio-label" for="convencer4"> Muy competente</label><br><br>
+
+<label for="V">23. ¿Qué tan apto te considerás para componer versos, poesías o textos cómicos?</label><br>
+<input type="radio" id="componer_versos1" name="V2" value="0"><label class="radio-label" for="componer_versos1"> Incompetente</label>
+<input type="radio" id="componer_versos2" name="V2" value="1"><label class="radio-label" for="componer_versos2"> Medianamente competente</label>
+<input type="radio" id="componer_versos3" name="V2" value="2"><label class="radio-label" for="componer_versos3"> Competente</label>
+<input type="radio" id="componer_versos4" name="V2" value="3"><label class="radio-label" for="componer_versos4"> Muy competente</label><br><br>
+
+<label for="AP">24. ¿Qué tan apto te considerás para decorar artísticamente un salón o escenario para un festival?</label><br>
+<input type="radio" id="decorar1" name="AP2" value="0"><label class="radio-label" for="decorar1"> Incompetente</label>
+<input type="radio" id="decorar2" name="AP2" value="1"><label class="radio-label" for="decorar2"> Medianamente competente</label>
+<input type="radio" id="decorar3" name="AP2" value="2"><label class="radio-label" for="decorar3"> Competente</label>
+<input type="radio" id="decorar4" name="AP2" value="3"><label class="radio-label" for="decorar4"> Muy competente</label><br><br>
+
+<label for="MS">25. ¿Qué tan apto te considerás para distinguir cuando alguien desentona en piezas musicales o canciones?</label><br>
+<input type="radio" id="desentonar1" name="MS2" value="0"><label class="radio-label" for="desentonar1"> Incompetente</label>
+<input type="radio" id="desentonar2" name="MS2" value="1"><label class="radio-label" for="desentonar2"> Medianamente competente</label>
+<input type="radio" id="desentonar3" name="MS2" value="2"><label class="radio-label" for="desentonar3"> Competente</label>
+<input type="radio" id="desentonar4" name="MS2" value="3"><label class="radio-label" for="desentonar4"> Muy competente</label><br><br>
+
+<label for="OG">26. ¿Qué tan apto te considerás para organizar y dirigir un evento o actividad?</label><br>
+<input type="radio" id="dirigir_evento1" name="OG2" value="0"><label class="radio-label" for="dirigir_evento1"> Incompetente</label>
+<input type="radio" id="dirigir_evento2" name="OG2" value="1"><label class="radio-label" for="dirigir_evento2"> Medianamente competente</label>
+<input type="radio" id="dirigir_evento3" name="OG2" value="2"><label class="radio-label" for="dirigir_evento3"> Competente</label>
+<input type="radio" id="dirigir_evento4" name="OG2" value="3"><label class="radio-label" for="dirigir_evento4"> Muy competente</label><br><br>
+
+<label for="CT">27. ¿Qué tan apto te considerás para escribir cartas o mensajes formales?</label><br>
+<input type="radio" id="cartas_formales1" name="CT2" value="0"><label class="radio-label" for="cartas_formales1"> Incompetente</label>
+<input type="radio" id="cartas_formales2" name="CT2" value="1"><label class="radio-label" for="cartas_formales2"> Medianamente competente</label>
+<input type="radio" id="cartas_formales3" name="CT2" value="2"><label class="radio-label" for="cartas_formales3"> Competente</label>
+<input type="radio" id="cartas_formales4" name="CT2" value="3"><label class="radio-label" for="cartas_formales4"> Muy competente</label><br><br>
+
+<label for="CI">28. ¿Qué tan apto te considerás para comprender y ejecutar movimientos de danza?</label><br>
+<input type="radio" id="danza1" name="CI2" value="0"><label class="radio-label" for="danza1"> Incompetente</label>
+<input type="radio" id="danza2" name="CI2" value="1"><label class="radio-label" for="danza2"> Medianamente competente</label>
+<input type="radio" id="danza3" name="CI2" value="2"><label class="radio-label" for="danza3"> Competente</label>
+<input type="radio" id="danza4" name="CI2" value="3"><label class="radio-label" for="danza4"> Muy competente</label><br><br>
+
+<label for="MC">29. ¿Qué tan apto te considerás para tocar un instrumento musical en una orquesta?</label><br>
+<input type="radio" id="orquesta1" name="MC2" value="0"><label class="radio-label" for="orquesta1"> Incompetente</label>
+<input type="radio" id="orquesta2" name="MC2" value="1"><label class="radio-label" for="orquesta2"> Medianamente competente</label>
+<input type="radio" id="orquesta3" name="MC2" value="2"><label class="radio-label" for="orquesta3"> Competente</label>
+<input type="radio" id="orquesta4" name="MC2" value="3"><label class="radio-label" for="orquesta4"> Muy competente</label><br><br>
+
+<label for="DT">30. ¿Qué tan apto te considerás para dar a conocer los problemas de la comunidad?</label><br>
+<input type="radio" id="problemas_comunidad1" name="DT2" value="0"><label class="radio-label" for="problemas_comunidad1"> Incompetente</label>
+<input type="radio" id="problemas_comunidad2" name="DT2" value="1"><label class="radio-label" for="problemas_comunidad2"> Medianamente competente</label>
+<input type="radio" id="problemas_comunidad3" name="DT2" value="2"><label class="radio-label" for="problemas_comunidad3"> Competente</label>
+<input type="radio" id="problemas_comunidad4" name="DT2" value="3"><label class="radio-label" for="problemas_comunidad4"> Muy competente</label><br><br>
+
+<label for="SS">31. ¿Qué tan apto te considerás para motivar a otros a actuar en momentos de dificultad?</label><br>
+<input type="radio" id="motivar1" name="SS3" value="0"><label class="radio-label" for="motivar1"> Incompetente</label>
+<input type="radio" id="motivar2" name="SS3" value="1"><label class="radio-label" for="motivar2"> Medianamente competente</label>
+<input type="radio" id="motivar3" name="SS3" value="2"><label class="radio-label" for="motivar3"> Competente</label>
+<input type="radio" id="motivar4" name="SS3" value="3"><label class="radio-label" for="motivar4"> Muy competente</label><br><br>
+
+<label for="EP">32. ¿Qué tan apto te considerás para escuchar las opiniones de los demás y debatir con respeto?</label><br>
+<input type="radio" id="escuchar_opiniones1" name="EP3" value="0"><label class="radio-label" for="escuchar_opiniones1"> Incompetente</label>
+<input type="radio" id="escuchar_opiniones2" name="EP3" value="1"><label class="radio-label" for="escuchar_opiniones2"> Medianamente competente</label>
+<input type="radio" id="escuchar_opiniones3" name="EP3" value="2"><label class="radio-label" for="escuchar_opiniones3"> Competente</label>
+<input type="radio" id="escuchar_opiniones4" name="EP3" value="3"><label class="radio-label" for="escuchar_opiniones4"> Muy competente</label><br><br>
+
+<label for="V">33. ¿Qué tan apto te considerás para crear obras artísticas o manualidades originales?</label><br>
+<input type="radio" id="crear_obras1" name="V3" value="0"><label class="radio-label" for="crear_obras1"> Incompetente</label>
+<input type="radio" id="crear_obras2" name="V3" value="1"><label class="radio-label" for="crear_obras2"> Medianamente competente</label>
+<input type="radio" id="crear_obras3" name="V3" value="2"><label class="radio-label" for="crear_obras3"> Competente</label>
+<input type="radio" id="crear_obras4" name="V3" value="3"><label class="radio-label" for="crear_obras4"> Muy competente</label><br><br>
+
+<label for="AP">34. ¿Qué tan apto te considerás para analizar y criticar obras de arte o literatura?</label><br>
+<input type="radio" id="criticar_obras1" name="AP3" value="0"><label class="radio-label" for="criticar_obras1"> Incompetente</label>
+<input type="radio" id="criticar_obras2" name="AP3" value="1"><label class="radio-label" for="criticar_obras2"> Medianamente competente</label>
+<input type="radio" id="criticar_obras3" name="AP3" value="2"><label class="radio-label" for="criticar_obras3"> Competente</label>
+<input type="radio" id="criticar_obras4" name="AP3" value="3"><label class="radio-label" for="criticar_obras4"> Muy competente</label><br><br>
+
+<label for="MS">35. ¿Qué tan apto te considerás para tocar en una banda o grupo musical?</label><br>
+<input type="radio" id="banda1" name="MS3" value="0"><label class="radio-label" for="banda1"> Incompetente</label>
+<input type="radio" id="banda2" name="MS3" value="1"><label class="radio-label" for="banda2"> Medianamente competente</label>
+<input type="radio" id="banda3" name="MS3" value="2"><label class="radio-label" for="banda3"> Competente</label>
+<input type="radio" id="banda4" name="MS3" value="3"><label class="radio-label" for="banda4"> Muy competente</label><br><br>
+
+<label for="OG">36. ¿Qué tan apto te considerás para ser un buen compañero o compañera en un trabajo en equipo?</label><br>
+<input type="radio" id="compañero1" name="OG3" value="0"><label class="radio-label" for="compañero1"> Incompetente</label>
+<input type="radio" id="compañero2" name="OG3" value="1"><label class="radio-label" for="compañero2"> Medianamente competente</label>
+<input type="radio" id="compañero3" name="OG3" value="2"><label class="radio-label" for="compañero3"> Competente</label>
+<input type="radio" id="compañero4" name="OG3" value="3"><label class="radio-label" for="compañero4"> Muy competente</label><br><br>
+
+<label for="CT">37. ¿Qué tan apto te considerás para recibir y dar críticas constructivas?</label><br>
+<input type="radio" id="criticas_constructivas1" name="CT3" value="0"><label class="radio-label" for="criticas_constructivas1"> Incompetente</label>
+<input type="radio" id="criticas_constructivas2" name="CT3" value="1"><label class="radio-label" for="criticas_constructivas2"> Medianamente competente</label>
+<input type="radio" id="criticas_constructivas3" name="CT3" value="2"><label class="radio-label" for="criticas_constructivas3"> Competente</label>
+<input type="radio" id="criticas_constructivas4" name="CT3" value="3"><label class="radio-label" for="criticas_constructivas4"> Muy competente</label><br><br>
+
+<label for="CI">38. ¿Qué tan apto te considerás para establecer relaciones interpersonales saludables?</label><br>
+<input type="radio" id="relaciones_interpersonales1" name="CI3" value="0"><label class="radio-label" for="relaciones_interpersonales1"> Incompetente</label>
+<input type="radio" id="relaciones_interpersonales2" name="CI3" value="1"><label class="radio-label" for="relaciones_interpersonales2"> Medianamente competente</label>
+<input type="radio" id="relaciones_interpersonales3" name="CI3" value="2"><label class="radio-label" for="relaciones_interpersonales3"> Competente</label>
+<input type="radio" id="relaciones_interpersonales4" name="CI3" value="3"><label class="radio-label" for="relaciones_interpersonales4"> Muy competente</label><br><br>
+
+<label for="MC">39. ¿Qué tan apto te considerás para adaptarte a los cambios en el entorno?</label><br>
+<input type="radio" id="adaptarse_cambios1" name="MC3" value="0"><label class="radio-label" for="adaptarse_cambios1"> Incompetente</label>
+<input type="radio" id="adaptarse_cambios2" name="MC3" value="1"><label class="radio-label" for="adaptarse_cambios2"> Medianamente competente</label>
+<input type="radio" id="adaptarse_cambios3" name="MC3" value="2"><label class="radio-label" for="adaptarse_cambios3"> Competente</label>
+<input type="radio" id="adaptarse_cambios4" name="MC3" value="3"><label class="radio-label" for="adaptarse_cambios4"> Muy competente</label><br><br>
+
+<label for="DT">40. ¿Qué tan apto te considerás para motivar a otros a mejorar y crecer?</label><br>
+<input type="radio" id="motivar_mejorar1" name="DT3" value="0"><label class="radio-label" for="motivar_mejorar1"> Incompetente</label>
+<input type="radio" id="motivar_mejorar2" name="DT3" value="1"><label class="radio-label" for="motivar_mejorar2"> Medianamente competente</label>
+<input type="radio" id="motivar_mejorar3" name="DT3" value="2"><label class="radio-label" for="motivar_mejorar3"> Competente</label>
+<input type="radio" id="motivar_mejorar4" name="DT3" value="3"><label class="radio-label" for="motivar_mejorar4"> Muy competente</label><br><br>
+
+<label for="SS">41. ¿Qué tan apto te considerás para reflexionar sobre tus propias acciones y decisiones?</label><br>
+<input type="radio" id="reflexionar_acciones1" name="SS4" value="0"><label class="radio-label" for="reflexionar_acciones1"> Incompetente</label>
+<input type="radio" id="reflexionar_acciones2" name="SS4" value="1"><label class="radio-label" for="reflexionar_acciones2"> Medianamente competente</label>
+<input type="radio" id="reflexionar_acciones3" name="SS4" value="2"><label class="radio-label" for="reflexionar_acciones3"> Competente</label>
+<input type="radio" id="reflexionar_acciones4" name="SS4" value="3"><label class="radio-label" for="reflexionar_acciones4"> Muy competente</label><br><br>
+
+<label for="EP">42. ¿Qué tan apto te considerás para buscar y ofrecer ayuda cuando es necesario?</label><br>
+<input type="radio" id="buscar_ayuda1" name="EP4" value="0"><label class="radio-label" for="buscar_ayuda1"> Incompetente</label>
+<input type="radio" id="buscar_ayuda2" name="EP4" value="1"><label class="radio-label" for="buscar_ayuda2"> Medianamente competente</label>
+<input type="radio" id="buscar_ayuda3" name="EP4" value="2"><label class="radio-label" for="buscar_ayuda3"> Competente</label>
+<input type="radio" id="buscar_ayuda4" name="EP4" value="3"><label class="radio-label" for="buscar_ayuda4"> Muy competente</label><br><br>
+
+<label for="P">43. ¿Qué tan apto te considerás para ser un buen modelo a seguir para los demás?</label><br>
+<input type="radio" id="modelo_seguir1" name="V4" value="0"><label class="radio-label" for="modelo_seguir1"> Incompetente</label>
+<input type="radio" id="modelo_seguir2" name="V4" value="1"><label class="radio-label" for="modelo_seguir2"> Medianamente competente</label>
+<input type="radio" id="modelo_seguir3" name="V4" value="2"><label class="radio-label" for="modelo_seguir3"> Competente</label>
+<input type="radio" id="modelo_seguir4" name="V4" value="3"><label class="radio-label" for="modelo_seguir4"> Muy competente</label><br><br>
+
+<label for="S">44. ¿Qué tan apto te considerás para reconocer tus propias emociones y las de los demás?</label><br>
+<input type="radio" id="reconocer_emociones1" name="AP4" value="0"><label class="radio-label" for="reconocer_emociones1"> Incompetente</label>
+<input type="radio" id="reconocer_emociones2" name="AP4" value="1"><label class="radio-label" for="reconocer_emociones2"> Medianamente competente</label>
+<input type="radio" id="reconocer_emociones3" name="AP4" value="2"><label class="radio-label" for="reconocer_emociones3"> Competente</label>
+<input type="radio" id="reconocer_emociones4" name="AP4" value="3"><label class="radio-label" for="reconocer_emociones4"> Muy competente</label><br><br>
+
+<label for="P">45. ¿Qué tan apto te considerás para llevar a cabo tareas de manera autónoma?</label><br>
+<input type="radio" id="tareas_autonomas1" name="MS4" value="0"><label class="radio-label" for="tareas_autonomas1"> Incompetente</label>
+<input type="radio" id="tareas_autonomas2" name="MS4" value="1"><label class="radio-label" for="tareas_autonomas2"> Medianamente competente</label>
+<input type="radio" id="tareas_autonomas3" name="MS4" value="2"><label class="radio-label" for="tareas_autonomas3"> Competente</label>
+<input type="radio" id="tareas_autonomas4" name="MS4" value="3"><label class="radio-label" for="tareas_autonomas4"> Muy competente</label><br><br>
+
+<label for="P">46. ¿Qué tan apto te considerás para gestionar tus emociones en situaciones estresantes?</label><br>
+<input type="radio" id="gestionar_emociones1" name="OG4" value="0"><label class="radio-label" for="gestionar_emociones1"> Incompetente</label>
+<input type="radio" id="gestionar_emociones2" name="OG4" value="1"><label class="radio-label" for="gestionar_emociones2"> Medianamente competente</label>
+<input type="radio" id="gestionar_emociones3" name="OG4" value="2"><label class="radio-label" for="gestionar_emociones3"> Competente</label>
+<input type="radio" id="gestionar_emociones4" name="OG4" value="3"><label class="radio-label" for="gestionar_emociones4"> Muy competente</label><br><br>
+
+<label for="P">47. ¿Qué tan apto te considerás para crear un ambiente de trabajo positivo?</label><br>
+<input type="radio" id="ambiente_trabajo1" name="CT4" value="0"><label class="radio-label" for="ambiente_trabajo1"> Incompetente</label>
+<input type="radio" id="ambiente_trabajo2" name="CT4" value="1"><label class="radio-label" for="ambiente_trabajo2"> Medianamente competente</label>
+<input type="radio" id="ambiente_trabajo3" name="CT4" value="2"><label class="radio-label" for="ambiente_trabajo3"> Competente</label>
+<input type="radio" id="ambiente_trabajo4" name="CT4" value="3"><label class="radio-label" for="ambiente_trabajo4"> Muy competente</label><br><br>
+
+<label for="P">48. ¿Qué tan apto te considerás para fomentar la colaboración y el trabajo en equipo?</label><br>
+<input type="radio" id="fomentar_colaboracion1" name="CI4" value="0"><label class="radio-label" for="fomentar_colaboracion1"> Incompetente</label>
+<input type="radio" id="fomentar_colaboracion2" name="CI4" value="1"><label class="radio-label" for="fomentar_colaboracion2"> Medianamente competente</label>
+<input type="radio" id="fomentar_colaboracion3" name="CI4" value="2"><label class="radio-label" for="fomentar_colaboracion3"> Competente</label>
+<input type="radio" id="fomentar_colaboracion4" name="CI4" value="3"><label class="radio-label" for="fomentar_colaboracion4"> Muy competente</label><br><br>
+
+<label for="P">49. ¿Qué tan apto te considerás para resolver conflictos de manera constructiva?</label><br>
+<input type="radio" id="resolver_conflictos1" name="MC4" value="0"><label class="radio-label" for="resolver_conflictos1"> Incompetente</label>
+<input type="radio" id="resolver_conflictos2" name="MC4" value="1"><label class="radio-label" for="resolver_conflictos2"> Medianamente competente</label>
+<input type="radio" id="resolver_conflictos3" name="MC4" value="2"><label class="radio-label" for="resolver_conflictos3"> Competente</label>
+<input type="radio" id="resolver_conflictos4" name="MC4" value="3"><label class="radio-label" for="resolver_conflictos4"> Muy competente</label><br><br>
+
+<label for="P">50. ¿Qué tan apto te considerás para empatizar con los demás?</label><br>
+<input type="radio" id="empatizar1" name="DT4" value="0"><label class="radio-label" for="empatizar1"> Incompetente</label>
+<input type="radio" id="empatizar2" name="DT4" value="1"><label class="radio-label" for="empatizar2"> Medianamente competente</label>
+<input type="radio" id="empatizar3" name="DT4" value="2"><label class="radio-label" for="empatizar3"> Competente</label>
+<input type="radio" id="empatizar4" name="DT4" value="3"><label class="radio-label" for="empatizar4"> Muy competente</label><br><br>
+
+<label for="SS">51. ¿Qué tan apto te considerás para actuar con desinterés y condolencia?</label><br>
+<input type="radio" id="actuar_desinteres1" name="SS5" value="0"><label class="radio-label" for="actuar_desinteres1"> Incompetente</label>
+<input type="radio" id="actuar_desinteres2" name="SS5" value="1"><label class="radio-label" for="actuar_desinteres2"> Medianamente competente</label>
+<input type="radio" id="actuar_desinteres3" name="SS5" value="2"><label class="radio-label" for="actuar_desinteres3"> Competente</label>
+<input type="radio" id="actuar_desinteres4" name="SS5" value="3"><label class="radio-label" for="actuar_desinteres4"> Muy competente</label><br><br>
+
+<label for="EP">52. ¿Qué tan apto te considerás para corregir a los demás sin ofenderlos?</label><br>
+<input type="radio" id="corregir1" name="EP5" value="0"><label class="radio-label" for="corregir1"> Incompetente</label>
+<input type="radio" id="corregir2" name="EP5" value="1"><label class="radio-label" for="corregir2"> Medianamente competente</label>
+<input type="radio" id="corregir3" name="EP5" value="2"><label class="radio-label" for="corregir3"> Competente</label>
+<input type="radio" id="corregir4" name="EP5" value="3"><label class="radio-label" for="corregir4"> Muy competente</label><br><br>
+
+<label for="V">53. ¿Qué tan apto te considerás para exponer juicios y opiniones públicamente sin preocuparte por las críticas?</label><br>
+<input type="radio" id="exponer_opiniones1" name="V5" value="0"><label class="radio-label" for="exponer_opiniones1"> Incompetente</label>
+<input type="radio" id="exponer_opiniones2" name="V5" value="1"><label class="radio-label" for="exponer_opiniones2"> Medianamente competente</label>
+<input type="radio" id="exponer_opiniones3" name="V5" value="2"><label class="radio-label" for="exponer_opiniones3"> Competente</label>
+<input type="radio" id="exponer_opiniones4" name="V5" value="3"><label class="radio-label" for="exponer_opiniones4"> Muy competente</label><br><br>
+
+<label for="AP">54. ¿Qué tan apto te considerás para colaborar en la elaboración de un libro sobre el arte en la Arquitectura?</label><br>
+<input type="radio" id="libro_arte1" name="AP5" value="0"><label class="radio-label" for="libro_arte1"> Incompetente</label>
+<input type="radio" id="libro_arte2" name="AP5" value="1"><label class="radio-label" for="libro_arte2"> Medianamente competente</label>
+<input type="radio" id="libro_arte3" name="AP5" value="2"><label class="radio-label" for="libro_arte3"> Competente</label>
+<input type="radio" id="libro_arte4" name="AP5" value="3"><label class="radio-label" for="libro_arte4"> Muy competente</label><br><br>
+
+<label for="MS">55. ¿Qué tan apto te considerás para dirigir un grupo musical?</label><br>
+<input type="radio" id="grupo_musical1" name="MS5" value="0"><label class="radio-label" for="grupo_musical1"> Incompetente</label>
+<input type="radio" id="grupo_musical2" name="MS5" value="1"><label class="radio-label" for="grupo_musical2"> Medianamente competente</label>
+<input type="radio" id="grupo_musical3" name="MS5" value="2"><label class="radio-label" for="grupo_musical3"> Competente</label>
+<input type="radio" id="grupo_musical4" name="MS5" value="3"><label class="radio-label" for="grupo_musical4"> Muy competente</label><br><br>
+
+<label for="OG">56. ¿Qué tan apto te considerás para colaborar con el desarrollo de métodos más eficientes de trabajo o estudio?</label><br>
+<input type="radio" id="desarrollo_metodos1" name="OG5" value="0"><label class="radio-label" for="desarrollo_metodos1"> Incompetente</label>
+<input type="radio" id="desarrollo_metodos2" name="OG5" value="1"><label class="radio-label" for="desarrollo_metodos2"> Medianamente competente</label>
+<input type="radio" id="desarrollo_metodos3" name="OG5" value="2"><label class="radio-label" for="desarrollo_metodos3"> Competente</label>
+<input type="radio" id="desarrollo_metodos4" name="OG5" value="3"><label class="radio-label" for="desarrollo_metodos4"> Muy competente</label><br><br>
+
+<label for="CT">57. ¿Qué tan apto te considerás para realizar investigaciones científicas con la finalidad de buscar la verdad?</label><br>
+<input type="radio" id="investigaciones_cientificas1" name="CT5" value="0"><label class="radio-label" for="investigaciones_cientificas1"> Incompetente</label>
+<input type="radio" id="investigaciones_cientificas2" name="CT5" value="1"><label class="radio-label" for="investigaciones_cientificas2"> Medianamente competente</label>
+<input type="radio" id="investigaciones_cientificas3" name="CT5" value="2"><label class="radio-label" for="investigaciones_cientificas3"> Competente</label>
+<input type="radio" id="investigaciones_cientificas4" name="CT5" value="3"><label class="radio-label" for="investigaciones_cientificas4"> Muy competente</label><br><br>
+
+<label for="CI">58. ¿Qué tan apto te considerás para enseñar a resolver problemas matemáticos?</label><br>
+<input type="radio" id="enseñar_matematicas1" name="CI5" value="0"><label class="radio-label" for="enseñar_matematicas1"> Incompetente</label>
+<input type="radio" id="enseñar_matematicas2" name="CI5" value="1"><label class="radio-label" for="enseñar_matematicas2"> Medianamente competente</label>
+<input type="radio" id="enseñar_matematicas3" name="CI5" value="2"><label class="radio-label" for="enseñar_matematicas3"> Competente</label>
+<input type="radio" id="enseñar_matematicas4" name="CI5" value="3"><label class="radio-label" for="enseñar_matematicas4"> Muy competente</label><br><br>
+
+<label for="MC">59. ¿Qué tan apto te considerás para inducir a la gente a obtener resultados prácticos?</label><br>
+<input type="radio" id="inducir_gente1" name="MC5" value="0"><label class="radio-label" for="inducir_gente1"> Incompetente</label>
+<input type="radio" id="inducir_gente2" name="MC5" value="1"><label class="radio-label" for="inducir_gente2"> Medianamente competente</label>
+<input type="radio" id="inducir_gente3" name="MC5" value="2"><label class="radio-label" for="inducir_gente3"> Competente</label>
+<input type="radio" id="inducir_gente4" name="MC5" value="3"><label class="radio-label" for="inducir_gente4"> Muy competente</label><br><br>
+
+<label for="DT">60. ¿Qué tan apto te considerás para participar en un concurso de modalismo (coches, aviones, barcos, etc.)?</label><br>
+<input type="radio" id="modalismo1" name="DT5" value="0"><label class="radio-label" for="modalismo1"> Incompetente</label>
+<input type="radio" id="modalismo2" name="DT5" value="1"><label class="radio-label" for="modalismo2"> Medianamente competente</label>
+<input type="radio" id="modalismo3" name="DT5" value="2"><label class="radio-label" for="modalismo3"> Competente</label>
+<input type="radio" id="modalismo4" name="DT5" value="3"><label class="radio-label" for="modalismo4"> Muy competente</label><br><br>
+
+    <div>
+        <input type="submit" value="Calcular resultado">
+        <button onClick="window.location.reload();">Reiniciar Test</button>
+    </div>
+    
+    </form>
+    <canvas id="MyChart">{{ chart }}</canvas>
+</body>
+</html>
