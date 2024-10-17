@@ -15,6 +15,14 @@ export class AppComponent {
   title = 'app';
   chart: Chart | null = null; // Declare chart property
 
+  // Función para desplazar la página al inicio y recargarla
+  scrollToTopAndReload() {
+    window.scrollTo(0, 0); // Desplaza la página al inicio
+    setTimeout(() => {
+      window.location.reload(); // Recarga la página
+    }, 50); // Pequeño retardo para que el scroll ocurra antes del reload
+  }
+
   onSubmit() {
     const scores = {
       S_S: 0,
